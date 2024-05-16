@@ -1,0 +1,213 @@
+/* topprod.css */
+
+#collection {
+  background-color: #f8f8f8;
+  margin-top: 1px;
+  padding: 0%;
+  margin-left: 2px;
+  margin-right: 2px;
+  
+  
+}
+.collectionscontainer {
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Utilisez auto-fill */
+    gap: 0px;
+    padding: 1%;
+    justify-content: center; /* Centrer les colonnes horizontalement */
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 2%;/* Centrer les éléments horizontalement */
+}
+
+.content {
+  padding: 1px;
+  border-radius: 8px; /* Coins arrondis */
+ margin-top: 10%;
+  position: relative;
+}
+
+
+
+
+
+
+
+/* Ajoutez d'autres styles CSS selon vos besoins */
+
+.h1top {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+
+
+
+
+.content:hover {
+  transform: scale(1.05);
+}
+
+.imgtop {
+  width: 100%;
+  height: 300px; /* Ajustez la hauteur selon vos besoins */
+  object-fit: cover; /* Ajuste l'image pour couvrir l'intégralité du conteneur tout en préservant les proportions */
+  margin-bottom: 1px;
+  border-radius: 3%;
+  padding: 0%;
+}
+
+
+.oldprixtop {
+  font-size: 18px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.nvprixtop {
+  font-size: 20px;
+  color: #035706;
+  text-align: end;
+  margin-top: 1%;
+  margin-bottom: -5%;
+}
+.currency{
+  font-size: 10px;
+}
+.titrecontent {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1px;
+  text-align: start;
+  margin-bottom: -4%;
+}
+.description {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 1px;
+  text-align: start;
+}
+
+.descriptiontop {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.star-filledd {
+  color: orange;
+}
+
+.btntop {
+  background-color: #3eff03;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btntop:hover {
+  background-color: #333;
+  color: #f4f4d3;
+}
+.typep{
+  position: relative;
+    
+    color: #000000;
+    font-size: 10px;
+    margin-top: -5%;
+    background-color: #e0dc04;
+    width: 45%;
+    text-align: center;
+    margin-left: 55%;
+
+}
+
+.symbol-top {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 10px;
+  color: rgb(0, 0, 0); /* Choose your color */
+  background-color: rgb(255, 185, 21);
+  border-radius: 10%;
+  padding: 3%;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 733px) {
+  .collectionscontainer {
+   
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Utilisez auto-fill */
+   
+  }
+  
+  .imgtop {
+    width: 100%;
+    height: 80%; /* Ajustez la hauteur selon vos besoins */
+    object-fit: cover; /* Ajuste l'image pour couvrir l'intégralité du conteneur tout en préservant les proportions */
+    margin-bottom: 1px;
+    border-radius: 3%;
+    padding: 0%;
+    border-radius: 10px 10px 0 0;
+    background-color: #ffffff17;
+  }
+  
+  .titrecontent {
+    font-size: 10px;
+    color: #333;
+    margin-bottom: -1px;
+    text-align: start;
+  }
+  .description{
+    font-size: 6px;
+    color: #333;
+    margin-bottom: 0px;
+    text-align: start;
+  }
+  
+  .oldprixtop {
+    font-size: 8px;
+    color: #999;
+    text-decoration: line-through;
+   
+  }
+  
+  .nvprixtop {
+    font-size: 10px;
+    margin-top: 1%;
+    text-align: start;
+    margin-bottom: -6px;
+  }
+  .symbol-top {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 7px;
+    color: rgb(0, 0, 0); /* Choose your color */
+    background-color: rgb(255, 185, 21);
+    border-radius: 10%;
+    padding: 3%;
+    text-transform: uppercase;
+  }
+  .star-filledd {
+    position: relative;
+    color: orange;
+    width: 5%;
+    text-align: start;
+    
+  }
+  .typep{
+    position: relative;
+    
+    color: #000000;
+    font-size: 6px;
+    margin-top: -20%;
+    background-color: #e0dc04;
+    width: 40%;
+    text-align: center;
+    margin-left: 55%;
+  }
+}

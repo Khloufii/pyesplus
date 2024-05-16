@@ -1,0 +1,54 @@
+/* dashbordmenu.css */
+.menulistcl {
+  position: absolute;
+
+  left: 60%;
+  width: 30%;
+ margin-top: -4%;
+  
+}
+.menu-listcl {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0; /* Espacement intérieur */
+  margin-left: 0%;
+  list-style-type: none; /* Suppression des puces */
+}
+.menu-linkk {
+  color: #ffffff; /* Couleur du texte */
+ 
+  text-decoration: none; /* Suppression du soulignement */
+  font-size: 1.2em; /* Taille de la police */
+}
+@media only screen and (max-width: 733px) {
+  .menulistcl {
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+    width: 100%;
+    background-image: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 11%,rgb(0, 0, 0) 11%, rgb(0, 0, 0) 24%, rgb(0, 0, 0) 29%,rgb(0, 0, 0) 29%, rgb(0, 0, 0) 43%,rgb(221, 24, 2) 24%,rgb(0, 0, 0) 71%,rgb(238, 0, 0) 23%, rgb(137, 5, 5) 100%);
+    border-top: 1px solid #ccc; /* Ligne de séparation */
+  }
+  
+  .menu-listcl {
+    display: flex;
+    justify-content: space-around; /* Espacement uniforme entre les éléments */
+    padding: 10px 0; /* Espacement intérieur */
+    margin: 0;
+    list-style-type: none; /* Suppression des puces */
+  }
+  
+  .menu-linkk {
+    color: #ffffff; /* Couleur du texte */
+    text-decoration: none; /* Suppression du soulignement */
+    font-size: 1.2em; /* Taille de la police */
+  }
+  
+  .menu-linkk:hover {
+    color: #f3eb05; /* Couleur du texte au survol */
+  }
+  .nbpanierr{
+    color: rgb(255, 255, 1);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  }

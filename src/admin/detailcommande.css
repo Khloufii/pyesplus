@@ -1,0 +1,144 @@
+/* Style pour les smartphones */
+
+/* Conteneur principal */
+.conteneur-detail-commande {
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  /* Bouton pour imprimer */
+  .bouton-imprimer {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  /* Liste des commandes */
+  .liste-commandes {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Élément de commande */
+  .element-commande {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Statut du produit */
+  .encour {
+    margin-bottom: 15px;
+    background-color: #fbff00;
+    color: #000000;
+    padding: 1px;
+  }
+  .Confirmer_Par_Admin,.Confirmer_Par_Vendeur {
+    margin-bottom: 15px;
+    background-color: #00ff00;
+    color: #000000;
+    padding: 1px;
+  }
+  .Anuller_Par_Client,.Anuller_Par_Vendeur,.Anuller_Par_Admin {
+    margin-bottom: 15px;
+    background-color: #ff3c00;
+    color: #ffffff;
+    padding: 1px;
+  }
+  .Reçu_Par_Client,.Reçu_Par_Vendeur,.Reçu_Par_Admin {
+    margin-bottom: 15px;
+    background-color: #239a19;
+    color: #ffffff;
+    padding: 1px;
+  }
+  
+  /* Titre du produit */
+  .titre-produit {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Image du produit */
+  .image-produit {
+    width: 20%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Prix du produit */
+  .prix-produit {
+    color: #e64127;
+    margin-bottom: 5px;
+    text-decoration: line-through;
+  }
+  
+  /* Prix total */
+  .prix-total {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Quantité du produit */
+  .quantite-produit {
+    margin-bottom: 10px;
+  }
+  
+  /* Bouton pour confirmer */
+  .bouton-confirmer{
+    background-color: #25c94b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .bouton-annuler{
+    background-color: #e64127;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .bouton-reception {
+    background-color: #1d7632;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Séparateur */
+  .liste-commandes li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+  }
+ 
+
+  @media print{
+    #imprim{
+        display: none;
+    }
+    .logoimprim{
+        display: list-item;
+       max-width: 15%;
+    }
+    .element-commande{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .image-produit{
+        width: 5%;
+    }
+}

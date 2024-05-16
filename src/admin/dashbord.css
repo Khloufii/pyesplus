@@ -1,0 +1,102 @@
+/* dashbord.css */
+
+.dashboard-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f5fcd0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 1%;
+  animation: changeBackgroundColor 1s infinite; /* Durée de l'animation et répétition */
+}
+@keyframes changeBackgroundColor {
+  0% {
+    background-color: #ad731c; /* Couleur initiale */
+  }
+  25% {
+    background-color: #aed1af; /* Nouvelle couleur */
+  }
+  50% {
+    background-color: #2997e0; /* Nouvelle couleur */
+  }
+  75% {
+    background-color: #f82912; /* Nouvelle couleur */
+  }
+  100% {
+    background-color: #d2c3af; /* Retour à la couleur initiale */
+  }
+}
+
+.logodashbord{
+  background-color: #0548b3;
+  padding: 1%;
+  border-radius: 2%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dashbordh1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.logodasbord {
+  width: 20%;
+}
+
+.stats-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.stat-box,
+.stat-boxrv {
+  
+  flex-basis: 48%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #2a2d2b;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(28, 28, 28, 0.484);
+}
+
+.dashbordh2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.pe {
+  font-size: 1.2rem;
+  color: #04ff00;
+}
+
+/* Add more styles as needed for a modern look */
+
+/* Animation styles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+.animated {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

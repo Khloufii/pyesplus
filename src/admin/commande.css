@@ -1,0 +1,107 @@
+/* commande.css */
+
+
+
+.user-orders-containerrs {
+  width: 90%;
+  margin: 0 auto;
+  margin-left: 1%;
+}
+
+
+
+
+.orders-list {
+  width: auto;
+  border-collapse: collapse;
+  margin-top: 2px;
+  background-color: #ddd;
+}
+
+
+
+
+
+.order-info {
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+
+
+
+
+.bttnn,
+.bttnn-cancel,
+.bttnn-received {
+  background-color: #27ae60;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+  height: auto;
+}
+
+.bttnn-cancel {
+  background-color: #e74c3c;
+}
+
+.bttnn-received {
+  background-color: #3498db;
+}
+
+.bttnn:hover {
+  background-color: #218c54;
+}
+
+.bttnn-cancel:hover {
+  background-color: #c0392b;
+}
+
+.bttnn-received:hover {
+  background-color: #2980b9;
+}
+
+.arrow-symbol {
+  background-color: #fea408;
+  color: #ffffff;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 40px;
+  height: 30px;
+}
+
+/* Ajouter des styles pour les écrans de petite taille (moins de 768 pixels) */
+@media (max-width: 767px) {
+  .user-orders-containerrs {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .btnn-containerr {
+    margin-top: 10px;
+  }
+
+  .bttnn,
+  .bttnn-cancel,
+  .bttnn-received {
+    width: auto;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}

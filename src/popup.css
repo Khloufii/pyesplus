@@ -1,0 +1,33 @@
+/* Popup.css */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+  
+  .popup.show {
+    display: block;
+    background-color: rgb(246, 246, 252);
+  }
+  
+  .popup-content {
+    text-align: center;
+    background-color: #17f8f810;
+    border-radius: 10%;
+    
+  }
+  
+  .close-btn {
+    cursor: pointer;
+  }
+  .imgpopup {
+    width: 100px;
+    height: 100px;
+  }

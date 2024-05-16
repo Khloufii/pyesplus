@@ -1,0 +1,44 @@
+/* LoadingSpinner.css */
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: -14%;
+}
+
+.loading-ring {
+  border: 4px solid rgba(15, 0, 0, 0.5);
+  border-left-color: #f3bf17; /* Couleur de la roue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; /* Animation de rotation */
+}
+.loading-ring2 {
+  position: absolute;
+  border: 4px solid rgba(15, 0, 0, 0.5);
+  border-left-color: #f31717; /* Couleur de la roue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; /* Animation de rotation */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.loading-symbol{
+  margin-left: 40%;
+
+}
+
+.faspiner{
+  color: #000000;
+}
+
+

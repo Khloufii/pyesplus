@@ -1,0 +1,83 @@
+/* Style pour les smartphones */
+
+/* Conteneur principal */
+.user-orders-container {
+  padding: 20px;
+  width: 100%;
+}
+.divcmd {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); /* Changer 250px selon vos besoins */
+  gap: 0px; /* Ajouter un espace entre les colonnes */
+  margin-right: 30%;
+}
+
+/* Titre des commandes */
+.orders-headerr {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: black;
+}
+
+/* Carte de commande */
+.order-card {
+  display: flex; /* Utilisez flexbox pour aligner les éléments en ligne */
+  align-items: center; /* Alignez les éléments sur l'axe vertical */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Informations sur la commande */
+.order-info {
+  flex-grow: 1; 
+ width: 300%;
+}
+
+/* Lien pour voir les détails */
+.detail-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Loader */
+.loading-spinner {
+  margin: 20px auto;
+}
+
+/* Aucune commande trouvée */
+.orders-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 50px;
+}
+
+/* Image du produit */
+.order-productsdet {
+ position: relative;
+ margin-top: 0%;
+   /* Inverse l'ordre des éléments enfants */
+}
+
+/* Image du produit */
+/* Image du produit */
+.image-produitdet {
+  width: 50px; /* Ajustez la taille de l'image selon vos besoins */
+  margin-right: 2px; /* Ajoutez une marge à droite pour séparer les images des autres éléments */
+}
+
+@media only screen and (max-width: 733px) {
+  .divcmd {
+    margin-right: 60%;
+  }
+  .order-info {
+    flex-grow: 1; 
+   width: 400%;
+  }
+  .image-produitdet {
+    width: 30px; /* Ajustez la taille de l'image selon vos besoins */
+    margin-right: 2px; /* Ajoutez une marge à droite pour séparer les images des autres éléments */
+  }
+}

@@ -1,0 +1,83 @@
+/* Style pour les smartphones */
+
+/* Conteneur principal */
+.conteneur-detail-produit {
+  padding: 20px;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Message de chargement */
+.message-chargement {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Symbole de chargement */
+.symbole-chargement {
+  margin-bottom: 20px;
+}
+
+/* Liste des commandes */
+.liste-commandes {
+  list-style: none;
+  padding: 0;
+}
+
+/* Élément de commande */
+.element-commande {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Statut du produit */
+.statut-produit {
+  margin-bottom: 15px;
+}
+
+/* Lien pour voir les détails du produit */
+.titre-produit {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Image du produit */
+.image-produit {
+  width: 20%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Prix du produit */
+.prix-original, .prix-vendre {
+  margin-bottom: 10px;
+}
+
+/* Quantité du produit */
+.quantite-produit {
+  margin-bottom: 10px;
+}
+
+/* Bouton pour annuler la commande */
+.bouton-annuler {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Bouton pour indiquer la réception de la commande */
+.bouton-reception {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}

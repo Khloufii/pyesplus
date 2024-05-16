@@ -1,0 +1,39 @@
+/* HTML: <div class="loader"></div> */
+.loader4 {
+    width:28px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin-left: 50%;
+    margin-top: 10%;
+    background: #F10C49;
+    animation: l9 2s infinite;
+  }
+  @keyframes l9 {
+    0%   {box-shadow: 
+            0 -16px #F4DD51, calc(16px*0.707) calc(-16px*0.707) #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+    12.5%   {box-shadow: 
+            0 0 #F4DD51, calc(16px*0.707) calc(-16px*0.707) #E3AAD6,16px 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+    25%   {box-shadow: 
+            0 0 #F4DD51, 0 0 #E3AAD6,16px 0 #F4DD51, calc(16px*0.707) calc(16px*0.707) #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+    37.5% {box-shadow: 
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, calc(16px*0.707) calc(16px*0.707) #E3AAD6,
+            0 16px #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+    50%   {box-shadow: 
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 16px #F4DD51, calc(-16px*0.707) calc(16px*0.707) #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+    62.5% {box-shadow: 
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, calc(-16px*0.707) calc(16px*0.707) #E3AAD6,-16px 0 #F4DD51, 0 0 #E3AAD6}
+    75%   {box-shadow: 
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,-16px 0 #F4DD51, calc(-16px*0.707) calc(-16px*0.707) #E3AAD6}
+    87.5% {box-shadow: 
+            0 -16px #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, calc(-16px*0.707) calc(-16px*0.707) #E3AAD6}
+    100% {box-shadow: 
+            0 -16px #F4DD51, calc(16px*0.707) calc(-16px*0.707) #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+  }

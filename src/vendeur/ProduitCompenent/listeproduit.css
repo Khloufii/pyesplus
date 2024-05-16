@@ -1,0 +1,97 @@
+/* ListProduit.css */
+
+.list-produit-container {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-icon {
+  margin-left: -30px;
+  position: relative;
+  z-index: 2;
+}
+
+.product-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-list th,
+.product-list td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+.product-list td {
+  font-size: 12px;
+}
+
+.product-list th {
+  background-color: #8e8e8e;
+  font-weight: bold;
+  font-size: small;
+}
+
+.product-row {
+  background-color: #fff;
+}
+
+.product-row:hover {
+  background-color: #b1b1b1;
+}
+
+.product-image img {
+  max-width: 50px;
+  height: auto;
+}
+
+.ajouter-produit{
+  position: relative;
+  text-decoration: none;
+  background-color: #ed8516;
+  color: rgb(255, 252, 252);
+  padding: 1%;
+  border-radius: 1%;
+}
+.ajouter-produit:hover{
+  background-color: #c16604;
+}
+
+.DISPONIBLE{
+background-color: rgb(91, 249, 91);
+
+}
+.INDISPONIBLE{
+  background-color: rgb(250, 114, 141);
+  
+}
+.BLOKED{
+  background-color: rgb(255, 79, 114);
+}
+
+.ban{
+background-color: rgb(250, 5, 5);
+}
+.anul{
+background-color: rgb(23, 166, 16);
+}
+.blok{
+background-color: crimson;
+}
+.deblok{
+  background-color: rgb(84, 157, 10);
+}

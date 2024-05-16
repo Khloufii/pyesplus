@@ -1,0 +1,147 @@
+/* productsnew.css */
+
+#collectionnewproduct {
+    padding: 10px;
+  }
+  
+  .h1new {
+    background-image: linear-gradient(90deg, rgb(35, 41, 90),rgb(113, 207, 69));
+    padding: 1%;
+    text-align: center;
+    margin-bottom: -1px;
+  }
+  
+  
+  .containerrnew {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Utilisez auto-fill */
+    gap: 0px;
+    padding: 1%;
+    justify-content: center; /* Centrer les colonnes horizontalement */
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 1%;
+    
+  }
+  
+  .contentnew {
+    position: relative;
+   
+    margin-bottom: 20px;
+    position: relative;
+    
+  }
+  
+  .promonew {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .imgnew {
+    width: 100%;
+    height: 320px; /* Ajustez la hauteur selon vos besoins */
+    object-fit: cover; /* Ajuste l'image pour couvrir l'intégralité du conteneur tout en préservant les proportions */
+    margin-bottom: 1px;
+    border-radius: 3%;
+    padding: 1%;
+  }
+  
+  .oldprixnew{
+    font-size: 12px;
+  color: #f44336;
+    margin-top: 5px;
+    text-decoration: line-through;
+    margin-bottom: -4px;
+  } 
+  .nvprixnew {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    
+  }
+  
+  .currencynew {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .star-fillednew {
+    color: orange;
+  }
+  
+  .titrecontentnew {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #777;
+    margin-bottom: -4px;
+  }
+  
+  .btnnew {
+    position: absolute; /* Ajoutez cette ligne */
+  bottom: -10px; /* Ajoutez cette ligne */
+  left: 50%; /* Ajoutez cette ligne */
+  transform: translateX(-50%); /* Ajoutez cette ligne */
+  background-color: #08b313;
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  
+  }
+  
+  .btnnew:hover {
+    background-color: #45a049;
+  }
+  
+  @media (max-width: 768px) {
+    .containerrnew {
+     
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Utilisez auto-fill */
+     
+     
+      
+    }
+   
+    .imgnew {
+      width: 100%;
+      height: 210px; /* Ajustez la hauteur selon vos besoins */
+      object-fit: cover; /* Ajuste l'image pour couvrir l'intégralité du conteneur tout en préservant les proportions */
+      margin-bottom: 1px;
+      border-radius: 3%;
+      padding: 0%;
+    }
+    .titrecontentnew {
+      font-size: 10px;
+      margin-top: 10px;
+      color: #777;
+      margin-bottom: -4px;
+    }
+    .btnnew {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 2px 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 10px;
+        transition: background-color 0.3s;
+      }
+      .promonew {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #c70505;
+      color: #ffffff;
+      padding: 2px 3px;
+      border-radius: 5px;
+      font-size: 10px;
+      }
+  }
+  

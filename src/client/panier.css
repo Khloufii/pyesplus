@@ -1,0 +1,164 @@
+/* Style spécifique pour les smartphones */
+
+/* Container principal */
+.cart-container {
+  padding: 20px;
+  width: 100%;
+}
+
+/* Titre du panier */
+.cart-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* Liste des articles */
+.cart-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Détails de l'article */
+.cart-item-details {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* Image de l'article */
+.cart-item-details img {
+  max-width: 80px;
+  margin-right: 15px;
+}
+
+/* Informations sur l'article */
+.cart-item-info {
+  flex: 1;
+}
+
+/* Prix original */
+.prixorig {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* Prix réduit */
+.prixred {
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(12, 179, 6);
+  margin-bottom: 5px;
+}
+
+/* Bouton supprimer */
+.cart-item-info button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Total du panier */
+.cart-total {
+  margin-top: 20px;
+}
+
+/* Bouton commander */
+.cart-total button {
+  background-color: #28c708;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Popup */
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  z-index: 999;
+}
+
+.popup p {
+  margin-bottom: 15px;
+}
+
+.popup button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-btn {
+  background-color: #dc3545;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-linknew {
+  text-decoration: none;
+  color: inherit;
+  margin-top: 10px;
+}
+
+/* Media Queries pour les smartphones */
+@media screen and (max-width: 480px) {
+  /* Container principal */
+  .cart-container {
+    padding: 10px;
+  }
+  
+  /* Titre du panier */
+  .cart-container h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Liste des articles */
+  .cart-item {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  /* Informations sur l'article */
+  .cart-item-info {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Image de l'article */
+  .cart-item-details img {
+    max-width: 10%;
+    margin-bottom: 10px;
+  }
+  
+  /* Bouton supprimer */
+  .cart-item-info button {
+    margin-top: 10px;
+  }
+  
+  /* Popup */
+  .popup {
+    padding: 15px;
+  }
+}

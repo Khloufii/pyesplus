@@ -1,0 +1,78 @@
+/* authmenu.css */
+@media only screen and (max-width: 733px) {
+  .menu-list-cl {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .menu-list-cl.show {
+    display: flex;
+  }
+
+  .menu-link {
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #252323;
+    display: block;
+    transition: background-color 0.3s;
+  }
+
+  .menu-link:hover {
+    background-color: #f2f2f2;
+  }
+
+  .nav-container {
+    position: relative;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+}
+.user-menu {
+  position: relative;
+  background-color: #030f01;
+}
+
+.username{
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-large;
+  padding-left: 1%;
+  text-transform: uppercase;
+}
+
+.menu-icon {
+  font-size: 20px;
+  margin-right: 5px;
+  color: #eef7f9;
+}
+
+
+
+
+
+.menu-link {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #f1e6e6;
+  transition: background-color 0.3s;
+}
+
+
+
+

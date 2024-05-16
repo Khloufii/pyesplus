@@ -1,0 +1,250 @@
+/* newproducts.css */
+
+.new-products-containerhovered {
+  margin-top: 2px;
+  text-align: center;
+  
+background-image: linear-gradient(353deg, rgba(255, 255, 255, 0.916),rgba(226, 226, 226, 0.073));
+}
+
+
+
+
+
+
+
+.best-seller {
+  flex: 0 0 auto;
+  margin-right: 0px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  max-width: max-content;
+  max-height: max-content;
+  margin-bottom: 0%;
+ 
+}
+
+.best-p1 {
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  
+  max-width: 65%;
+  max-height: 65%;
+  background-color: #fffefe;
+}
+.top-p1 {
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  
+  max-width: 65%;
+  max-height: 65%;
+  background-color: #fffefe;
+}
+.product-imagenew {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 1%;
+  margin-top: 0%;
+  padding: 1%;
+  background-color: transparent;
+}
+.seller .best-p1,.top-p1 img {
+  height: 200px;
+  width: 290px;
+}
+.seller .best-p1,.top-p1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 1%;
+  /* border: 2px solid black; */
+}
+.sellertop .best-p1,.top-p1 img{
+  height: 200px;
+  width: 290px;
+}
+.sellertop .best-p1,.top-p1{
+  width: 200px;
+  height: 200px;
+  border-radius: 1%;
+}
+
+.symbol-new {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 10px;
+  color: white; /* Choose your color */
+  background-color: red;
+  border-radius: 10%;
+  padding: 3%;
+  text-transform: uppercase;
+}
+
+
+.titre-new {
+  font-size: 1.3rem;
+  margin-right: 90%;
+  color: rgb(6, 101, 184);
+  font-style: normal;
+  margin-left: 20%;
+  text-transform: uppercase;
+}
+
+.descr {
+  font-size: 0.8rem;
+  color: #1c1b1b;
+}
+
+.old-price{
+  color: rgb(240, 2, 2);
+  text-decoration: line-through;
+  margin-right: 50%;
+  margin-top: -5%;
+  margin-left: 20%;
+}
+.new-price {
+  margin: 5px 0;
+  color: rgb(126, 252, 0);
+  font-size: large;
+  margin-right: 50%;
+  margin-top: -8%;
+  padding-left: 20%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Hover styles */
+.best-seller:hover {
+  transform: translateY(-5px);
+}
+
+.best-seller:hover .best-p1 {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* newproducts.css */
+
+
+
+.h2new {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #050404;
+}
+
+.scroll-container {
+  overflow-x: hidden; /* Modification : Masquer la barre de défilement horizontale */
+  white-space: nowrap;
+  padding-bottom: 20px;
+}
+
+.seller {
+  display: flex;
+  animation: scroll 15s linear infinite;
+  height: 50%;
+  width: 50%; /* Modification : Définir une largeur maximale pour éviter le défilement infini */
+}
+.sellertop{
+  display: flex;
+  animation: scrolltop 15s linear infinite;
+  height: 50%;
+  width: 50%;
+}
+
+.seller-container.paused .seller {
+  animation-play-state: paused;
+}
+.seller-container.paused .sellertop {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scrolltop {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+
+
+.seller-container {
+  scrollbar-width: thin; /* Pour Firefox */
+  scrollbar-color: transparent transparent; /* Couleur de la barre et du fond */
+  overflow-y: auto; /* Ajout pour activer la barre de défilement verticale si nécessaire */
+}
+
+.seller-container::-webkit-scrollbar {
+  width: 12px; /* Largeur de la barre de défilement */
+}
+
+.seller-container::-webkit-scrollbar-thumb {
+  background-color: #625d5d; /* Couleur de la poignée de la barre de défilement */
+  border-radius: 6px;
+  scroll-snap-type: mandatory; /* Bord arrondi de la poignée */
+}
+
+.seller-container::-webkit-scrollbar-track {
+  background-color: #dcdada; /* Couleur du fond de la barre de défilement */
+}
+
+/* ... Le reste de votre CSS reste inchangé ... */
+@media only screen and (max-width: 733px) {
+  .product-imagenew {
+  
+    border-radius: 1%;
+    margin-top: 10%;
+    padding: 1%;
+    background-color: transparent;
+  }
+  .seller .best-p1,.top-p1 img {
+    height: 200px;
+    width: 200px;
+  }
+  .seller .best-p1,.top-p1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 1%;
+    /* border: 2px solid black; */
+  }
+  .symbol-new {
+    position: absolute;
+    top: 10px;
+    right: 1px;
+    font-size: 7px;
+    color: white; /* Choose your color */
+    background-color: red;
+    border-radius: 10%;
+    padding: 3%;
+    text-transform: uppercase;
+  }
+  .best-p1 {
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    
+    max-width: 75%;
+    max-height: 75%;
+  }
+  .top-p1 {
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    
+    max-width: 60%;
+    max-height: 60%;
+  }
+}

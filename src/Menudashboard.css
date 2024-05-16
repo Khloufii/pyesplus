@@ -1,0 +1,55 @@
+.horizontal_menu {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #091a9948;
+  padding: 1px;
+  z-index: 1000;
+}
+
+.horizontal_menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.horizontal_menu li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 1px;
+}
+
+
+.horizontal_menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 12px ;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.horizontal_menu a:hover {
+  color: black;
+  background-color: #3db6ea;
+}
+.menu-iconad{
+  position: absolute;
+  color: #fff;
+  margin-top: -3%;
+  margin-left: 98%;
+}
+@media only screen and (max-width: 733px) {
+  #menutel{
+    display: none;
+  }
+  #imgtel{
+    
+    width: 20px;
+    font-size: 10px;
+  }
+}
+/* Ajoutez des styles supplémentaires selon vos besoins */

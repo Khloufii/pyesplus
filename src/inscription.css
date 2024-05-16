@@ -1,0 +1,62 @@
+/* inscription.css */
+.inscription-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgb(168, 123, 102) 0%, rgb(168, 123, 102) 34%,rgb(198, 165, 139) 34%, rgb(198, 165, 139) 43%,rgb(213, 186, 158) 43%, rgb(213, 186, 158) 44%,rgb(138, 80, 65) 44%, rgb(138, 80, 65) 48%,rgb(153, 101, 84) 48%, rgb(153, 101, 84) 61%,rgb(123, 59, 47) 61%, rgb(123, 59, 47) 63%,rgb(108, 38, 28) 63%, rgb(108, 38, 28) 85%,rgb(183, 144, 121) 85%, rgb(183, 144, 121) 100%);
+}
+  
+  .inscription-form {
+    position: relative;
+    background-color: #0b0a0a67;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    margin-top: -2%;
+    height: auto; /* Adjust width as needed */
+  }
+  
+  .inscription-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .input-field,
+  .select-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .submit-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add additional styles for Popup and Popuperror components if needed */
+  @media only screen and (max-width: 733px) {
+    .inscription-form {
+      margin-top: -1%;
+    }
+  }
+
+  @media only screen and (max-width: 333px) {
+    .inscription-form {
+      width: 220px;
+    }
+  }

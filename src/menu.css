@@ -1,0 +1,210 @@
+/* Styles pour les écrans larges (par défaut) */
+body {
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+ 
+}
+
+/* Ajoutez cette classe pour le fond spécifique aux administrateurs et vendeurs */
+body.admin-vendeur-background {
+  background: linear-gradient(to right, #dce0e2 0%, #b1b9d0 100%);
+}
+body, html {
+  overflow-x: hidden;
+  margin-top: 58px; /* Empêche le défilement horizontal */
+}
+.navbar {
+  box-shadow: 0 5px 4px rgb(146 161 176 / 15%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-image: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 11%,rgb(0, 0, 0) 11%, rgb(0, 0, 0) 24%, rgb(0, 0, 0) 29%,rgb(0, 0, 0) 29%, rgb(0, 0, 0) 43%,rgb(221, 24, 2) 24%,rgb(0, 0, 0) 71%,rgb(238, 0, 0) 23%, rgb(137, 5, 5) 100%);
+  z-index: 100;
+  transition: top 0.3s ease-in-out;
+
+}
+
+/* Cacher le menu lorsque la page est en haut */
+.navbar-hidden {
+  top: -100px; /* Ajustez la hauteur en fonction de la taille de votre menu */
+}
+
+
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.navbar img {
+  margin-left: 3rem;
+  width: 30%;
+  
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: #61dafb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  margin-right: 20px;
+  
+}
+
+.menuuser{
+  position: absolute;
+  text-decoration: none;
+  color: #ffffffcb;
+  transition: color 0.3s;
+  padding: 5px;
+  border-radius: 5%;
+  text-transform: uppercase;
+  margin-left: 80%;
+  margin-top: -3%;
+}
+.menuuser:hover{
+  background-color: #f19915;
+  color: #000000;
+}
+.enligne{
+  color: rgb(0, 255, 0);
+  background-color: #000000;
+}
+.horsligne{
+  color: rgb(255, 0, 0);
+  padding: 0.5%;
+  background-color: #000000;
+}
+.menu-link:hover{
+background-color: #78665d;
+}
+
+
+.menu-list-cll {
+  list-style: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin-left: 60%;
+  margin-top: -2%;
+  padding: 0;
+}
+.logo{
+  width: 52%;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 0.2;
+}
+.logo:hover{
+  transform: scale(1.15);
+
+}
+.menu-list li {
+  margin-right: 20px;
+
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.2s;
+  border-width: 1px ;
+  border-radius: 2%;
+  font-size: 100%;
+}
+
+.menu-link:hover {
+  color: #ffffff;
+  background-color: #fc9c1d;
+}
+
+
+/* Styles pour les écrans étroits (responsifs) */
+@media only screen and (max-width: 733px) {
+  body, html {
+    margin-top: 47px;
+  }
+  .nav-container {
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #fff;
+    margin-top: 0%;
+  }
+
+  .logo-container {
+    margin-bottom: 5px;
+    width: 55%;
+    margin-left: -8%;
+  }
+
+  .menu-list-cll {
+    display: column;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 30%;
+    
+    
+  }
+
+ 
+
+  .menu-link {
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #252323;
+    display: block;
+    transition: background-color 0.3s;
+  }
+
+  .menu-link:hover {
+    background-color: #f2f2f2;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: #61dafb;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+ 
+}
+@media only screen and (max-width: 304px) {
+  .logo-container {
+    margin-bottom: 10px;
+    width: 30%;
+    margin-left: -14%;
+  }
+}
+.menudashbord{
+  position: relative;
+  margin-top: 0%;
+  width: 100%;
+  padding: 0%;
+}
+
+.nbpanier{
+  position: absolute;
+  color: rgb(247, 7, 7);
+  height: auto;
+  width: auto;
+  font-weight: bold;
+  margin-right: 10%;
+}
+
+.logoimprim{
+  display: none;
+}

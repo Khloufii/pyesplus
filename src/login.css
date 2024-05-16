@@ -1,0 +1,121 @@
+/* login.css */
+.login-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(45deg, rgb(168, 123, 102) 0%, rgb(168, 123, 102) 34%,rgb(198, 165, 139) 34%, rgb(198, 165, 139) 43%,rgb(213, 186, 158) 43%, rgb(213, 186, 158) 44%,rgb(138, 80, 65) 44%, rgb(138, 80, 65) 48%,rgb(153, 101, 84) 48%, rgb(153, 101, 84) 61%,rgb(123, 59, 47) 61%, rgb(123, 59, 47) 63%,rgb(108, 38, 28) 63%, rgb(108, 38, 28) 85%,rgb(183, 144, 121) 85%, rgb(183, 144, 121) 100%);
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px); /* Adjust the blur intensity as needed */
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+.logintitre{
+  font-size: large;
+  color: #ece7e6;
+}
+/* Additional styling for the login container */
+.logologin{
+  width: 10%;
+}
+.eror{
+  color: #ff0303;
+  text-transform: capitalize;
+  background-color: #ece7e6;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.login-form {
+  background-color: #0b0a0a67;
+  padding: 50px;
+  margin-top: -120px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.inscription {
+  background: linear-gradient(to right, #bca8a4 0%, #c9b507 100%);
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.inputt {
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+}
+
+.button {
+  background: linear-gradient(to right, #e72f0b 0%, #675d03 100%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #c9b503 0%, #ece7e6 100%);
+  color: black;
+}
+
+.linkk {
+  color: #ffffff;
+  text-decoration: none;
+  background-attachment: fixed;
+  text-align: start;
+  padding: 1.5%;
+  width: 40%;
+  text-decoration: none;
+}
+
+.linkk:hover {
+  text-decoration: none;
+  color: black;
+  background: linear-gradient(to right, #c9b503 0%, #ece7e6 100%);
+}
+
+/* Add additional styles for Popup and Popuperror components if needed */
+@media only screen and (max-width: 733px) {
+  .inputt {
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: small;
+  }
+  .button {
+    background: linear-gradient(to right, #e72f0b 0%, #675d03 100%);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  .linkk {
+    
+    text-decoration: none;
+    background-attachment: fixed;
+    font-size: small;
+    padding: 1.5%;
+    width: 40%;
+    text-decoration: none;
+  }
+}

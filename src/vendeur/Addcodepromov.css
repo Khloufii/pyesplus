@@ -1,0 +1,99 @@
+/* Addcodepromov.css */
+
+.container {
+    margin: 2px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin-top: 1%;
+    padding: 2%;
+  }
+  
+
+  
+  
+  
+  .form2 {
+    display: contents;
+    margin-top: 1px;
+    width: 100%;
+    margin-left: 20%;
+    background-color: #c8e6c9;
+  }
+  
+  .form2 label {
+    color: #030303; /* Nouveau style pour les labels */
+  }
+  
+  .form2 input {
+    width: 20%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Nouveau style pour les inputs */
+    border-radius: 4px; /* Nouveau style pour les inputs */
+  }
+  
+  .search-input {
+    padding: 8px;
+    margin-right: 0%;
+    margin-bottom: 10px;
+    width: 40%;
+    border: 1px solid #ccc; /* Nouveau style pour le champ de recherche */
+    border-radius: 4px; /* Nouveau style pour le champ de recherche */
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 90%;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #69786a;
+    color: white;
+  }
+  
+  .etat-disponible {
+    background-color: #c8e6c9;
+  }
+  
+  .etat-indisponible {
+    background-color: #ffcdd2;
+  }
+  
+  .modifc {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5%;
+    border-radius: 10%;
+    background-color: #fea408;
+  }
+  .modifc:hover{
+    background-color: #0056b3;
+    color: #ededed;
+  }
+  .modif:hover {
+    text-decoration: underline;
+  }
+  
+  .close-btn {
+    background-color: #007bff; /* Nouveau style pour le bouton de fermeture des popups */
+    color: white; /* Nouveau style pour le bouton de fermeture des popups */
+    padding: 8px 12px; /* Nouveau style pour le bouton de fermeture des popups */
+    border: none; /* Nouveau style pour le bouton de fermeture des popups */
+    border-radius: 4px; /* Nouveau style pour le bouton de fermeture des popups */
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    background-color: #0056b3; /* Nouveau style pour le survol du bouton de fermeture des popups */
+  }
+  .lodingpromo{
+    position: absolute;
+    margin-left: 40%;
+    
+  }

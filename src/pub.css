@@ -1,0 +1,442 @@
+.ad-bar-container {
+  position: relative;
+  overflow: hidden;
+  width: 99%;
+  height: 300px;
+ background-color: #ec0404;
+  margin-left: 2px;
+ 
+  box-shadow: 0 30px 38px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 5px;
+  border-width: 2px;
+}
+.publiv{
+  position: absolute;
+  margin-top: -10%;
+  margin-left: -10%;
+}
+.pay1{
+  position: absolute;
+  color: #0039d6;
+  font-size: 10px;
+
+}
+.pay1{
+  position: absolute;
+  color: #0039d6;
+  font-size: 10px;
+
+}
+/* Animation en arrière-plan */
+.ad-bar-container {
+  
+  background-size: 400% 200%;
+  animation: gradientBackground 5s ease infinite;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Mouvement des éléments de la barre publicitaire */
+
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+.ad-bar {
+  width: 25%;
+  height: auto;
+  animation: scrollAds linear infinite;
+  padding: 4%;
+}
+
+@keyframes scrollAds {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% * var(--currentAdIndex)));
+  }
+}
+
+.ad-item {
+  flex: 0 0 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: none;
+  padding: 8%;
+}
+
+.ad-item.active {
+  display: block;
+  opacity: 1;
+}
+
+.nvpub {
+  position: relative;
+  background-color: #e8fd28;
+  color: #ff0808;
+  box-shadow: 0 30px 38px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 1%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 150%;
+  position: absolute;
+  margin-left: 82%;
+  margin-top: 0%;
+  animation: slideIn 1s ease-in-out;
+}
+
+.product-image-new {
+  width: 110%;
+    height: 230px; /* Ajustez la hauteur selon vos besoins */
+    object-fit: cover; /* Ajuste l'image pour couvrir l'intégralité du conteneur tout en préservant les proportions */
+    margin-bottom: 1px;
+    border-radius: 3%;
+    padding: 1%;
+    margin-top: -17%;
+    margin-left: 20%;
+    
+}
+.ppub{
+  position: absolute;
+  height: 50%;
+}
+.imgpub {
+  position: absolute;
+  width: 20%;
+  height: 80%;
+  margin-top: 2%;
+  filter: brightness(110%);
+  margin-left: 70%;
+  animation: pulseNew 3s ease-in-out infinite; /* Utilisez la nouvelle animation pulseNew */
+}
+.imgofr {
+  width: 90%;
+  height: 90%;
+  margin-top: 0%;
+  margin-left: 6%;
+  animation: pulseNew 1s ease-in-out infinite; /* Utilisez la nouvelle animation pulseNew */
+}
+.imgofr2 {
+  width: 10%;
+  height: 10%;
+  margin-top: -30%;
+  margin-left: 85%;
+  animation: pulseNew 1s ease-in-out infinite; /* Utilisez la nouvelle animation pulseNew */
+}
+.sppourcentag{
+  position: absolute;
+  background-color: rgb(238, 255, 0);
+  color: #000000;
+  padding: 10px;
+  border-radius: 5%;
+  margin-left: 20%;
+}
+@keyframes pulseNew {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 3;
+  text-decoration: none;
+  width: 1%;
+}
+
+.left-arrow {
+  right: 95%;
+  margin-top: -4%;
+  animation: pulse 0.5s ease-in-out infinite;
+}
+
+.right-arrow {
+  left: 91%;
+  margin-top: -4%;
+  animation: pulse 0.5s ease-in-out infinite;
+}
+
+.arrow:hover{
+  background-color: #fd9a28da;
+}
+
+
+.shoppub {
+  background-color: #0ad417;
+  color: #ffffff;
+  padding: 5%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 1%;
+  margin-top: 10%;
+  width: 100%;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.shoppub:hover{
+  background-color: #ff0808;
+  color: #ffffff;
+}
+
+.info {
+  position: absolute;
+  top: 40%;
+  right: -100%; /* Commencez à droite du conteneur pour le déplacement initial */
+  transform: translate(0, -40%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column; /* Afficher les informations en colonne */
+  animation: slideInRight 1s ease-in-out forwards;
+}
+
+.infopub {
+  margin-top: 0;
+  color: rgb(255, 255, 255);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+  text-transform: uppercase;
+}
+
+.infopub1 {
+  margin-top: 1em; /* Ajustez la valeur selon vos besoins */
+  color: rgb(255, 255, 255);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.infopub2 {
+  margin-top: 1em; /* Ajustez la valeur selon vos besoins */
+  color: rgb(255, 255, 255);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 170%;
+  padding: 3px;
+  border-radius: 5%;
+}
+
+.navigation-points {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.navigation-point {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.navigation-point.active {
+  background-color: #000000;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    right: -50%;
+  }
+  to {
+    right: 0;
+  }
+}
+.shoppub:hover {
+  transform: scale(1.1);
+}
+
+.imgpub:hover {
+  filter: brightness(110%);
+}
+
+
+@keyframes rotateAndMove {
+  from {
+    transform: rotate(0deg) translateX(0);
+  }
+  to {
+    transform: rotate(360deg) translateX(20px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slideInRight {
+  from {
+    right: -20%;
+  }
+  to {
+    right: 40%; /* Ajustez la position finale à droite selon vos besoins */
+  }
+}
+
+@media only screen and (max-width: 733px) {
+  .ad-bar-container {
+    position: relative;
+    overflow: hidden;
+    width: 98%;
+    height: 150px;
+    
+  }
+  .nvpub {
+    font-size: 50%;
+    margin-left: 82%;
+    margin-top: 0%;
+  }
+  .product-image-new {
+    width: 150%;
+    height: 110px; /* Ajustez la hauteur selon vos besoins */
+    object-fit: cover; /* Ajuste l'image pour couvrir l'intégralité du conteneur tout en préservant les proportions */
+    margin-bottom: 1px;
+    border-radius: 3%;
+    margin-left: 30%;
+    padding: 1%;
+    margin-top: -10%;
+    box-shadow: 0 30px 38px rgba(255, 255, 255, 0.486), 0 10px 10px rgba(255, 255, 255, 0.22);
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  
+ 
+  .imgofr {
+    width: 70%;
+    height: 60%;
+    margin-top: 0%;
+    margin-left: 6%;
+    animation: pulseNew 1s ease-in-out infinite; /* Utilisez la nouvelle animation pulseNew */
+  }
+  .imgofr2 {
+    width: 10%;
+    height: 10%;
+    margin-top: -60%;
+    margin-left: 85%;
+    animation: pulseNew 1s ease-in-out infinite; /* Utilisez la nouvelle animation pulseNew */
+  }
+  .sppourcentag{
+    padding: 2px;
+    font-size: small; 
+    margin-left: 30%;
+  }
+  .shoppub {
+    
+    font-size: 10px;
+    padding: 2%;
+    
+    margin-left: 1%;
+    margin-top: 10%;
+    width: max-content;
+    
+  }
+  .info {
+    position: absolute;
+    top: 40%;
+    right: -100%; /* Commencez à droite du conteneur pour le déplacement initial */
+    transform: translate(0, -40%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column; /* Afficher les informations en colonne */
+    animation: slideInRight 1s ease-in-out forwards;
+  }
+  
+.infopub {
+  margin-top: 0;
+ 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 50%;
+  text-transform: uppercase;
+}
+
+.infopub1 {
+  margin-top: 1em; /* Ajustez la valeur selon vos besoins */
+
+  font-size: 50%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.infopub2 {
+  margin-top: 2px; /* Ajustez la valeur selon vos besoins */
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 80%;
+  padding: 1px;
+  border-radius: 5%;
+}
+@keyframes slideInRight {
+  from {
+    right: -20%;
+  }
+  to {
+    right: 27%; /* Ajustez la position finale à droite selon vos besoins */
+  }
+}
+.navigation-point {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.imgpub {
+  position: absolute;
+  width: 20%;
+  height: 80%;
+  margin-top: 2%;
+  margin-left: 75%;
+  animation: pulseNew 3s ease-in-out infinite; /* Utilisez la nouvelle animation pulseNew */
+}
+}
