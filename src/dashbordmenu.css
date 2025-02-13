@@ -1,54 +1,103 @@
 /* dashbordmenu.css */
+/* Menu Container */
 .menulistcl {
-  position: absolute;
-
-  left: 60%;
-  width: 30%;
- margin-top: -4%;
-  
-}
-.menu-listcl {
+  position: fixed;
   display: flex;
   justify-content: space-around;
-  padding: 10px 0; /* Espacement intérieur */
-  margin-left: 0%;
-  list-style-type: none; /* Suppression des puces */
-}
-.menu-linkk {
-  color: #ffffff; /* Couleur du texte */
+  align-items: center;
+  background-color: #fef8f3;
+  padding: 2px 20px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Ombre pour le menu */
+  margin-left: 60%;
  
-  text-decoration: none; /* Suppression du soulignement */
-  font-size: 1.2em; /* Taille de la police */
+  z-index: 1000;
+  border-radius: 2%;
+
 }
-@media only screen and (max-width: 733px) {
+
+/* Menu List */
+.menu-listcl {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Menu Item */
+.menu-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Menu Link */
+.menu-linkk {
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.menu-linkk:hover {
+  color: #d4a373;
+}
+
+/* Menu Label */
+.menu-label {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #555;
+  text-transform: capitalize;
+}
+
+/* Panier Counter */
+.nbpanierr {
+  font-size: 12px;
+  background-color: #d9534f;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: -10px;
+}
+
+/* Style général */
+
+
+/* Position fixe en bas pour les petits écrans */
+@media (max-width: 768px) {
   .menulistcl {
     position: fixed;
     bottom: 0;
-    left: 0%;
-    width: 100%;
-    background-image: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 11%,rgb(0, 0, 0) 11%, rgb(0, 0, 0) 24%, rgb(0, 0, 0) 29%,rgb(0, 0, 0) 29%, rgb(0, 0, 0) 43%,rgb(221, 24, 2) 24%,rgb(0, 0, 0) 71%,rgb(238, 0, 0) 23%, rgb(137, 5, 5) 100%);
-    border-top: 1px solid #ccc; /* Ligne de séparation */
+    left: 0;
+    right: 0;
+    margin-left: 0%;
+    z-index: 1000;
   }
-  
+
   .menu-listcl {
-    display: flex;
-    justify-content: space-around; /* Espacement uniforme entre les éléments */
-    padding: 10px 0; /* Espacement intérieur */
+    width: 100%;
     margin: 0;
-    list-style-type: none; /* Suppression des puces */
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
   }
-  
+
+  .menu-item {
+    flex: 1; /* Chaque élément prend une largeur égale */
+    text-align: center;
+    padding: 10px 0;
+  }
+
   .menu-linkk {
-    color: #ffffff; /* Couleur du texte */
-    text-decoration: none; /* Suppression du soulignement */
-    font-size: 1.2em; /* Taille de la police */
+    font-size: 18px; /* Taille adaptée pour les mobiles */
+    color: #333;
   }
-  
-  .menu-linkk:hover {
-    color: #f3eb05; /* Couleur du texte au survol */
+
+  .menu-label {
+    font-size: 12px; /* Texte plus petit sous les icônes */
+    margin-top: 3px;
   }
-  .nbpanierr{
-    color: rgb(255, 255, 1);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  }
+}

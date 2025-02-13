@@ -4,10 +4,11 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaInstagram, FaFacebook } from 're
 import { Link, useNavigate } from 'react-router-dom';
 
 const Copiright = () => {
+  const year = new Date().getFullYear();
   return (
    
       <div className='copiright'>
-      <p className='copiright'>&copy; {new Date().getFullYear()} PyesPlus. Tous Droits Réservés.</p>
+      <p className='copiright'>&copy; {year} PyesPlus. Tous Droits Réservés.</p>
 
     </div>
   );

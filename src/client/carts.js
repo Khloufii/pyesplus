@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../authprovider';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { seleclistprod, selectIp, selectPanier, selectapi, selectprofil, setPanier, setnbpanier } from '../reducer';
+import { seleclistprod, selectCurrencies, selectExchangeRates, selectIp, selectPanier, selectapi, selectprofil, selectselectedCurrency, setPanier, setnbpanier } from '../reducer';
 import Loading4 from '../loading/loading4';
 import Popup from '../popupvalide';
 import Loading2 from '../loading/loading2';
@@ -19,17 +19,23 @@ const Panier = () => {
   const profil = useSelector(selectprofil);
   const auth = useAuth();
   const navigate = useNavigate();
+  const exchangeRates = useSelector(selectExchangeRates);
+  const selectedCurrency = useSelector(selectselectedCurrency);
+ 
   const produitsPanier = useSelector(selectPanier);
   const produits = useSelector(seleclistprod);
   const utilisateur = useSelector(selectprofil);
   const [chargement, setChargement] = useState(true);
-  const [chargementsup, setChargementsup] = useState(false);
+  const [chargementsup, setChargementsup] = useState(0);
   const [afficherPopup, setAfficherPopup] = useState(false);
   const [reponse, setReponse] = useState('');
   const [etat, setEtat] = useState(false);
   const ip = useSelector(selectIp);
  
-
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  
+  },[])
   const obtenirProduitsPanier = async () => {
     try {
       setChargement(true);
@@ -53,23 +59,34 @@ const Panier = () => {
   }, []);
 
   const supprimerProduitDuPanier = async (idProduit) => {
-    setChargementsup(true);
+    setChargementsup(idProduit);
     try {
       await axios.delete(`${api}/api/remove-item/${idProduit}`);
       const nouveauxProduitsPanier = produitsPanier.filter((produit) => produit.id !== idProduit);
       dispatch(setPanier(nouveauxProduitsPanier));
       obtenirProduitsPanier();
-      setChargementsup(false);
+      setChargementsup(0);
     } catch (erreur) {
       
     }
   };
 
-  const calculerPrixTotal = () => {
-    return Array.isArray(produitsPanier)
-      ? produitsPanier.reduce((total, produit) => total + produit.prix_total, 0)
-      : 0;
+  const convertirDevise = (montant, tauxMAD, tauxDevise) => {
+    if (!tauxMAD || !tauxDevise) {
+      console.warn("Taux de change manquant :", { tauxMAD, tauxDevise });
+      return montant; // Retourne le montant initial si les taux ne sont pas disponibles
+    }
+    return ((montant / tauxMAD) * tauxDevise).toFixed(2);
   };
+  
+  const calculerPrixTotal = () => {
+    if (!Array.isArray(produitsPanier)) return 0;
+    return produitsPanier.reduce((total, produit) => {
+      const prixConverti = convertirDevise(produit.prix_total, exchangeRates?.MAD, exchangeRates?.[selectedCurrency]);
+      return total + parseFloat(prixConverti);
+    }, 0);
+  };
+  
 
   const confirmation = () => {
     if(!auth.user){
@@ -155,9 +172,22 @@ const Panier = () => {
                       <div className="cart-item-info">
                         <p>Quantité : {produit.quantité} | Coleur : {produit.color} | Taill : {produit.taill}</p>
                         
-                        <p className='prixorig'>Prix d'origine : {produitDetail.nv_prix * produit.quantité} MAD</p>
-                        <h5 className='prixred'>Prix réduit : {produit.prix_total} MAD</h5>
-                        <button onClick={() => supprimerProduitDuPanier(produit.id)}>{chargementsup ? <FontAwesomeIcon icon={faSpinner} /> : 'Supprimer'}</button>
+                        <p className='prixorig'>
+  Prix d'origine :{' '}
+  {convertirDevise(produitDetail.nv_prix * produit.quantité, exchangeRates?.MAD, exchangeRates?.[selectedCurrency])}{' '}
+  {selectedCurrency}
+  + Prix Livraison{' '}
+  {convertirDevise(produitDetail.prix_livraison, exchangeRates?.MAD, exchangeRates?.[selectedCurrency])}{' '}
+  {selectedCurrency}
+</p>
+<h5 className='prixred'>
+  Prix réduit :{' '}
+  {convertirDevise(produit.prix_total, exchangeRates?.MAD, exchangeRates?.[selectedCurrency])}{' '}
+  {selectedCurrency}
+</h5>
+
+
+                        <button onClick={() => supprimerProduitDuPanier(produit.id)}>{chargementsup == produit.id ? <><FontAwesomeIcon icon={faSpinner} spin /> chargement...</> : 'Supprimer'}</button>
                       </div>
                     </li>
                   );
@@ -165,7 +195,7 @@ const Panier = () => {
               })}
             </ul>
             <div className="cart-total">
-              <p>Prix total de tous les articles : {calculerPrixTotal()} MAD</p>
+              <p>Prix total de tous les articles : {calculerPrixTotal()} {selectedCurrency}</p>
               <button onClick={() => confirmation()}>Passer la commande</button>
             </div>
           </>

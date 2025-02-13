@@ -53,7 +53,7 @@ const Allproduct = () => {
                         return (
                             <div key={product.id} className='produit-card'>
                                
-                               <Link className="product-link" to={`/detailprod/${product.id}`}  onClick={hindlprod} >
+                               <a className="product-link" href={`/detailprod/${product.id}`}   >
 
                                     <img className="product-image" src={`${api}/images/${product.image}`} alt={product.image} />
                                     <h5 className="product-title">{product.titre}</h5>
@@ -75,7 +75,7 @@ const Allproduct = () => {
                                                
                                             />{product.etat_livraison === 1 ? 'Livraison Gratuit' : `Livraison ${product.prix_livraison} MAD`}
                                             </p>
-                                </Link>
+                                </a>
                              
                             </div>
                         )

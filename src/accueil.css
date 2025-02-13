@@ -1,271 +1,136 @@
+/* Global Styles */
 
-
-.accueil-container {
-  margin: 0 auto;
-  padding: 20px;
-  width: 99%;
-  height: 99%;
-  background-color: #fff3f3;
-}
-
+/* Main Title */
 .main-title {
-  font-size: 14px;
-  margin-bottom: 2px;
-  font-family: 'Courier New', Courier, monospace;
-  color: #000000;
+  text-align: left;
+  font-size: 1.8rem;
+  color: #FF5722; /* Couleur orange vif */
+  margin: 20px 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-left: 4px solid #FF5722;
+  text-transform: uppercase;
 }
 
-.detail-linkk{
- 
-  padding: 5%;
-  border-radius: 3%;
-  width: 100%;
-}
-
+/* Container for Products */
 .produits-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Utilisez auto-fill */
-  gap: 0px;
-  padding: 1%;
-  justify-content: center; /* Centrer les colonnes horizontalement */
-  background-color: rgb(255, 255, 255);
-  margin-bottom: 2%;
-}
-.devise{
-  font-size: 10px;
-  color: #425740;
-  text-decoration: solid;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.produit-card {
-  
-  padding: 1px;
-  border-radius: 5px;
- 
- 
-  transition: transform 0.3s;
-  background-color: #dddddd;
-
-}
-
-
-.produit-info {
-  max-height: 70%;
-
-}
-
-.produit-info h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  max-height: 50%;
-
-}
-.product-title{
-  font-family: 'Times New Roman', Times, serif;
-  margin-bottom: -1%;
-  color: #555;
-}
-.product-description{
-  margin-top: -5%;
-}
-.produit-info p {
-  font-size: 10px;
-  margin-bottom: 10px;
-  max-height: 50%;
-}
-
-.prix {
-  font-weight: bold;
-  color: #e44d26; /* You can change this color based on your design */
-}
-
-
-.product-pricee_old {
-  color: rgb(203, 41, 41);
-  font-size: 0.5em;
-  width: min-content;
-  text-decoration: line-through;
-  margin-top: -50%;
-}
-.productpricenew {
-  color: rgb(1, 46, 12);
-  margin-bottom: -2%;
-  font-weight: bolder;
-  font-size: 15px;
-  text-align: start;
-}
-/* accueil.css */
-
-.produit-card img {
-  width: 100%;
-  height: 320px; /* Ajustez la hauteur selon vos besoins */
-  object-fit: cover; /* Ajuste l'image pour couvrir l'intégralité du conteneur tout en préservant les proportions */
-  margin-bottom: 1px;
-  border-radius: 3%;
-  padding: 1%;
-}
-
-.produit-info {
-  padding: 3px;
-  text-align: justify;
-  background-color: rgb(241, 240, 240); /* Set a background color for the product info container */
-}
-
-
-.produit-card {
- 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 2px;
+  background-color: #fff9f2; /* Blanc cassé pour contraste */
   border-radius: 8px;
+  margin: 2px auto;
+  width: 99%;
+  max-width: 1200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-
+/* Product Card */
+.produit-card {
   background-color: #ffffff;
-  padding: 1%;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
 }
 
-
-
-
-
-
-
-
-
-/* Add some basic styling to the navigation bar */
-
-
-/* styles.css */
-
-.pub {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
+.produit-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.navpub {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  height: max-content;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+/* Product Link */
+.product-link {
+  text-decoration: none;
+  color: inherit;
 }
 
-.navpub:hover {
-  transform: translateY(5px);
-}
-
-.imgpub {
-  width: 250px;
-  height: max-content;
+/* Product Image */
+.product-image {
+  width: 100%;
   height: auto;
-  border-radius: 8px;
+  object-fit: cover;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.descriptionpub {
+/* Product Title */
+.product-title {
+  font-size: 1rem;
+  font-weight: bold;
   text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
-  color: #555;
+  margin: 10px;
+  color: #7a5630;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-/* Styles communs à toutes les tailles d'écran */
-.accueil-container {
-  max-width: 12000px;
-  max-height: 12000px;
-  margin: 0 auto;
-  padding: 20px;
+/* Product Price */
+.productpricenew {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #a5190c;
+  margin: 5px 10px;
+  text-align: center;
 }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+/* Currency Symbol */
+.devise {
+  font-size: 0.9rem;
+  color: #999;
 }
 
-.livraison{
-  text-align: end;
-  color: rgb(6, 154, 18);
-  font-size: 12px;
+/* Delivery Info */
+.livraison {
+  font-size: 0.9rem;
+  color: #29a906;
+  margin: 10px 0;
+  text-align: center;
 }
 
-/* Styles pour les écrans de taille moyenne (par exemple, tablettes) */
+/* Star Ratings */
+.star-filled {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
 
+.star-filled .fa-star {
+  color: #ffa500; /* Jaune orangé */
+  margin: 0 2px;
+}
 
-/* Styles pour les écrans de petite taille (par exemple, smartphones) */
-
-@media only screen and (max-width: 733px) {
+/* Responsive Design */
+@media screen and (max-width: 768px) {
   .produits-container {
-    
-   
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Utilisez auto-fill */
-    
-  }
-  .produit-card {
-    
-    padding: 1px;
-    border-radius: 5px;
-   
-    transition: transform 0.3s;
-   
-   
-  }
-  .produit-card img {
-    width: 100%;
-    height: 220px; /* Ajustez la hauteur selon vos besoins */
-    object-fit: cover; /* Ajuste l'image pour couvrir l'intégralité du conteneur tout en préservant les proportions */
-    margin-bottom: 1px;
-    border-radius: 3%;
-    padding: 0%;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur tablettes */
   }
 
-  .produit-info h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    max-height: 50%;
-  
-  }
-  .product-title{
-    font-family: 'Times New Roman', Times, serif;
-    
-    color: #555;
+  .main-title {
     font-size: 10px;
-    text-align: start;
   }
-  .product-pricee_old {
-    color: rgb(203, 41, 41);
-    font-size: 0.5em;
-    width: min-content;
-    text-decoration: line-through;
+
+  .product-title {
+    font-size: 0.9rem;
+    height: auto;
   }
+
   .productpricenew {
-   
-    font: optional;
-    font-weight: bold;
-    font-size: 12px;
-   
-  }
-  .star-filled{
-    font-size: 10px;
-    margin-top: 2%;
-  }
-  .livraison{
-    text-align: end;
-    color: rgb(6, 154, 18);
-    font-size: 8px;
+    font-size: 1rem;
   }
 }
 
-/* Ajoutez d'autres media queries selon les besoins pour les écrans plus petits ou plus grands */
+@media screen and (max-width: 480px) {
+ 
 
+  .product-title {
+    font-size: 0.8rem;
+  }
 
-
-
-
-
-
-
-
-
-
-
+  .productpricenew {
+    font-size: 0.9rem;
+  }
+}

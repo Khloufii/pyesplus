@@ -1,5 +1,5 @@
 // TopProductsList.js
-import './topprod.css';
+import './top2.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectExchangeRates, selectapi, selectselectedCurrency, selecttopprod, setloading } from './reducer';
 import LoadingSpinner from './loading/loading';
 import Loading2 from './loading/loading2';
+import Allproduct from './allproduct';
+import Accueil from './accueil';
 
 const TopProductsList = () => {
   const navigate = useNavigate();
@@ -33,23 +35,18 @@ const TopProductsList = () => {
    
   
 
-  const hindlprod = (id) => {
-    navigate(`/detailprod/${id}`);  // Replace with your actual route
-    dispatch(setloading(true));
-    window.scrollTo(0, 0);
-    dispatch(setloading(false));
-  };
+
  
  if(loading){
   return <LoadingSpinner/>
  }
   return (
     
-      
+      <>
       <div className="collectionscontainer">
         {topProducts.map((product) => (
           <div className="content" key={product.id}>
-            <Link className="product-link" to={`/detailprod/${product.id}`}  onClick={hindlprod}>
+            <a className="product-link" href={`/detailprod/${product.id}`}  >
             <img src={`${api}/images/${product.image}`} alt={product.image} className='imgtop'/>
             
             <p className='titrecontent'>{product.titre}</p>
@@ -68,14 +65,15 @@ const TopProductsList = () => {
               />
             ))}
             
-            <p className='typep'>Plus Vendus</p>
+            <p className='typep'>Best-Seller</p>
            
-            </Link>
+            </a>
 
             </div>
         ))}
       </div>
-   
+      <Accueil/>
+      </>
   );
 };
 

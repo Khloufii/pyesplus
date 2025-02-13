@@ -1,0 +1,109 @@
+/* Style général */
+
+  
+  #collectionns {
+    padding: 2rem 1rem;
+  }
+  
+  .h1netflix {
+  
+    color: #e50914;
+    font-size: 2.5rem;
+    padding: 1%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+  
+  }
+  
+  /* Conteneur de la collection */
+  .container-netflix {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Utilisez auto-fill */
+    gap: 10px;
+    padding: 1%;
+    justify-content: center; /* Centrer les colonnes horizontalement */
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 2%;/* Centrer les éléments horizontalement */
+  }
+  
+  /* Cartes de produits */
+  .content-netflix {
+    padding: 12px;
+    border-radius: 8px; /* Coins arrondis */
+   
+    position: relative;
+    background-color: #222;
+    border-radius: 10px;
+   
+   
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .content-netflix:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .product-link {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .imgcateg {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+  
+  .titrecontentnetflix {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #e50914;
+    text-align: center;
+  }
+  .descnetflix{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #e1e509;
+    text-align: center;
+  }
+  
+  .prixnewnetflix {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #46d369; /* Vert pour les prix comme Netflix */
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Réactif pour tablettes et smartphones */
+  @media only screen and (max-width: 733px) {
+    .container-netflix {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Changer 250px selon vos besoins */
+      margin-top: 10%;
+       
+      }
+   
+    .content-netflix {
+      width: 100%;
+      max-width: 100%;
+    }
+    .titrecontentnetflix {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        color: #e50914;
+        text-align: center;
+      }
+      .descnetflix{
+        font-size: 0.7rem;
+      
+      }
+      
+      .prixnewnetflix {
+        font-size: 1rem;
+       
+      }
+  }
+  

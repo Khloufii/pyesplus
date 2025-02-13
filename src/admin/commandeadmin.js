@@ -120,7 +120,7 @@ const filteredOrders = allcommande.filter((order) => {
      
         <table className="orders-list">
           <thead>
-            <tr className="table-header">
+            <tr className="">
               <th> ID</th>
               <th id='menutel'>Nom</th>
               <th>Prenom</th>
@@ -141,21 +141,21 @@ const filteredOrders = allcommande.filter((order) => {
               }
 
               return (
-                <tr key={order.id} className="order-item" data-status={order.status} 
+                <tr key={order.id} className="" data-status={order.status} 
                 style={{ backgroundColor: getStatusColor(order.status) }}
                 >
-                  <td className="order-info">{order.id}</td>
-                  <td className="order-info" id='menutel'>{client.name || ''}</td>
-                  <td className="order-info">{client.prenom || ''}</td>
-                  <td className="order-info" id='menutel'>{order.total_prix} MAD</td>
-                  <td className="order-info" id='imgtel'>{order.status}</td>
-                  <td className="order-info" id='menutel'>{order.payment_method}</td>
-                  <td className="order-info" id='imgtel'>{formatDate(order.created_at)}</td>
+                  <td className="">{order.id}</td>
+                  <td className="" id='menutel'>{client.name || ''}</td>
+                  <td className="">{client.prenom || ''}</td>
+                  <td className="" id='menutel'>{order.total_prix} MAD</td>
+                  <td className="" id='imgtel'>{order.status}</td>
+                  <td className="" id='menutel'>{order.payment_method}</td>
+                  <td className="" id='imgtel'>{formatDate(order.created_at)}</td>
                   <td id='imgtel'>
                     <div className="btnn-containerr">
                      
-                      <Link to={`/detailcommandeadmin/${order.id}/${order.client_id}`} className="arrow-symbol">
-                        Detaill ...
+                      <Link to={`/detailcommandeadmin/${order.id}/${order.client_id}`} className="arrow-symboll">
+                        ...
                       </Link>
                     </div>
                   </td>

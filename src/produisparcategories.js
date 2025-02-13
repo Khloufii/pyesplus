@@ -48,7 +48,7 @@ const Productscategorie = (props) => {
 
           return (
             <div className="content-categ" key={product.id}>
-                  <Link className="product-link" to={`/detailprod/${product.id}`}  onClick={hindlprod}>
+                  <a className="product-link" href={`/detailprod/${product.id}`} >
               <img src={`${api}/images/${product.image}`} alt={product.image} className='imgcateg'/>
              
              
@@ -62,7 +62,7 @@ const Productscategorie = (props) => {
              
             
 
-              </Link>
+              </a>
             </div>
           );
         })}

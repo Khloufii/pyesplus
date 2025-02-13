@@ -1,167 +1,139 @@
-/* topprod.css */
+/* Global Styles */
 
-#collectionpromo {
-    text-align: center;
-    padding: 0px;
-   
-  }
-  
-  .h1promo {
-    font-size: 2em;
-    margin-bottom: -2px;
-    color: #555;
-  }
-  
-  .containerr {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Utilisez auto-fill */
-    gap: 0px;
-    padding: 1%;
-    justify-content: center; /* Centrer les colonnes horizontalement */
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 1%;
-   
-  }
-  
-  .contentpromo {
-    padding: 1px;
-    border-radius: 8px; /* Coins arrondis */
-   
-    position: relative;
-    background-color: #ffffff;
-  }
-  
-  .promo {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #ed5252;
-    color: #fff;
+
+/* Section Title */
+.promotionh1 {
+  text-align: left;
+  font-size: 1.8rem;
+  color: #FF5722; /* Couleur orange vif */
+  margin: 20px 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-left: 4px solid #FF5722;
+  text-transform: uppercase;
+}
+
+/* Container for Promo Products */
+.collectionspromo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grille responsive */
+  gap: 15px;
+  padding: 10px 20px;
+}
+
+/* Individual Promo Product Card */
+.contentpromo {
+  background-color: #FFFFFF;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contentpromo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Promo Badge */
+.promo {
+  position: absolute;
+
+  background-color: #FF4D4F; /* Rouge vif */
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+/* Product Image */
+.imgpromo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Product Title */
+.titrecontentpromo {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px;
+  text-align: left;
+  color: #7a5630;
+  height: 40px; /* Uniformiser la hauteur */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Old Price */
+.oldprixpromo {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: #999;
+  margin: 5px 10px;
+  text-align: left;
+}
+
+/* New Price */
+.nvprixpromo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #a5190c;
+  margin: 5px 10px;
+  text-align: left;
+}
+
+/* Currency Symbol */
+.currencypromo {
+  font-size: 0.9rem;
+  margin-left: 5px;
+  color: #999;
+}
+
+/* Star Ratings */
+.star-filled {
+  color: #FFC107; /* Jaune doré */
+}
+
+/* Media Query for Small Screens (Mobile) */
+@media screen and (max-width: 768px) {
+  .promotionh1 {
+    font-size: 1.5rem;
     padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
   }
   
-  .imgpromo {
-    width: 100%;
-  height: 300px; /* Ajustez la hauteur selon vos besoins */
-  object-fit: cover; /* Ajuste l'image pour couvrir l'intégralité du conteneur tout en préservant les proportions */
-  margin-bottom: 1px;
-  border-radius: 3%;
-  padding: 1%;
+  .collectionspromo {
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur mobile */
+    gap: 10px;
+    padding: 1px 2px;
   }
-  
-  
-  
-  .oldprixpromo{
-    font-size: 1.2em;
-    margin-top: -20px;
-    display: block;
-    color: #ff5252;
-    text-decoration: line-through;
-    text-align: end;
-  }
-  .nvprixpromo {
-    font-size: 1.2em;
-    margin-top: -20px;
-    display: block;
-    text-align: end;
-  }
-  
-  .currencypromo {
-    font-size: 0.8em;
-  }
-  
-  .star-filled {
-    color: gold;
-  }
-  
-  .titrecontentpromo {
-    margin-top: 1px;
-    font-size: 1em;
-    color: #050573;
-    text-align: start;
-  }
-  
-  .descriptionpromo {
-    font-size: 1em;
-    color: #555;
-    margin-top: -4%;
-  }
-  
-  .btnpromo {
-    background-color: #2196f3;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    font-size: 1em;
-  }
-  
-  .btnpromo:hover {
-    background-color: #0d47a1;
-  }
-  .promotionh1{
-    background-image: linear-gradient(90deg, rgb(90, 35, 81),rgb(207, 104, 69));
-    padding: 1%;
-    text-align: center;
-    margin-bottom: -1px;
-  }
+
  
-  @media only screen and (max-width: 733px) {
-    .containerr {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-    .imgpromo {
-      width: 100%;
-      height: 80%; /* Ajustez la hauteur selon vos besoins */
-      object-fit: cover; /* Ajuste l'image pour couvrir l'intégralité du conteneur tout en préservant les proportions */
-      margin-bottom: 1px;
-      border-radius: 3%;
-      padding: 0%;
-      border-radius: 10px 10px 0 0;
-      background-color: #ffffff17;
-    }
-    
-    
-    
-   
-    .promo {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: #ff5252;
-      color: #fff;
-      padding: 2px 3px;
-      border-radius: 5px;
-      font-size: 10px;
-    }
-    .titrecontentpromo {
-      margin-top: 1px;
-      font-size: 10px;
-      color: #050573;
-      text-align: start;
-    }
-    
-    .descriptionpromo {
-      font-size: 8px;
-      color: #555;
-      margin-top: -15%;
-    }
-    .oldprixpromo{
-      font-size: 8px;
-      margin-top: -20px;
-      display: block;
-      color: #ff5252;
-      text-decoration: line-through;
-      text-align: start;
-    }
-    .nvprixpromo {
-      font-size: 12px;
-      margin-top: -20px;
-      display: block;
-      text-align: start;
-    }
+
+  .titrecontentpromo {
+    font-size: 0.8rem;
+    height: auto; /* Autoriser plusieurs lignes pour les titres */
   }
+
+  .nvprixpromo, .oldprixpromo {
+    font-size: 0.9rem;
+  }
+}
+
+/* Media Query for Very Small Screens (Phones) */
+@media screen and (max-width: 480px) {
+ 
+
+  
+
+  .titrecontentpromo {
+    font-size: 0.7rem;
+  }
+
+  .nvprixpromo, .oldprixpromo {
+    font-size: 0.8rem;
+  }
+}

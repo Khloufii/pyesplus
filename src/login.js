@@ -13,6 +13,8 @@ import Loading2 from './loading/loading2';
 import Loading3 from './loading/loading3';
 import { useDispatch,useSelector } from 'react-redux';
 import { selectapi } from './reducer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserClock, faUserLock } from '@fortawesome/free-solid-svg-icons';
 
 const LoginComponent = () => {
   const { id } = useParams();
@@ -104,7 +106,7 @@ const LoginComponent = () => {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleLogin}>
-      <img className='logologin' src={`${process.env.PUBLIC_URL}/favicon.ico`} alt='PYES-PLUS E-COM'/> <span className='logintitre'>Login</span>
+      <img className='logologin' src={`${process.env.PUBLIC_URL}/faviconn.ico`} alt='PYES-PLUS E-COM'/>  <span className='logintitre'>Login</span>
         <p className='eror'>{rep}</p><br/> 
         <div className="form-group">
           <input type="email" className="inputt" name='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' required />

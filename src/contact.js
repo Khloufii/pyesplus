@@ -31,7 +31,7 @@ const Contact = () => {
       </div>
       <div className="contact-image">
         <Link to="/" className="logo-link">
-          <img className='logo' src={`${process.env.PUBLIC_URL}/logo111.png`} alt='PYES-PLUS E-COM'/>       
+          <img className='logo' src={`${process.env.PUBLIC_URL}/logo9.png`} alt='PYES-PLUS E-COM'/>       
         </Link>
       </div>
      

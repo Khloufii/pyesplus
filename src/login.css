@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: linear-gradient(45deg, rgb(168, 123, 102) 0%, rgb(168, 123, 102) 34%,rgb(198, 165, 139) 34%, rgb(198, 165, 139) 43%,rgb(213, 186, 158) 43%, rgb(213, 186, 158) 44%,rgb(138, 80, 65) 44%, rgb(138, 80, 65) 48%,rgb(153, 101, 84) 48%, rgb(153, 101, 84) 61%,rgb(123, 59, 47) 61%, rgb(123, 59, 47) 63%,rgb(108, 38, 28) 63%, rgb(108, 38, 28) 85%,rgb(183, 144, 121) 85%, rgb(183, 144, 121) 100%);
+  background-image: radial-gradient(circle at 34% 75%, rgba(142, 142, 142,0.06) 0%, rgba(142, 142, 142,0.06) 50%,rgba(11, 11, 11,0.06) 50%, rgba(11, 11, 11,0.06) 100%),radial-gradient(circle at 40% 51%, rgba(12, 12, 12,0.06) 0%, rgba(12, 12, 12,0.06) 50%,rgba(242, 242, 242,0.06) 50%, rgba(242, 242, 242,0.06) 100%),radial-gradient(circle at 50% 87%, rgba(189, 189, 189,0.06) 0%, rgba(189, 189, 189,0.06) 50%,rgba(0, 0, 0,0.06) 50%, rgba(0, 0, 0,0.06) 100%),linear-gradient(90deg, hsl(35,0%,96%),hsl(35,0%,96%));
 }
 
 .login-container::before {
@@ -27,6 +27,7 @@
 /* Additional styling for the login container */
 .logologin{
   width: 10%;
+  background-color: #ffffff;
 }
 .eror{
   color: #ff0303;

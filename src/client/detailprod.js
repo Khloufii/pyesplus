@@ -8,7 +8,7 @@ import Popuperror from '../popuperror';
 import { useAuth } from '../authprovider';
 import { useNavigate, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBagShopping, faCar, faCartPlus, faEnvelope, faPlus, faShop, faShopLock, faShoppingBag, faSpinner, faStar, faStore, faStoreAlt, faStoreAltSlash, faTruckLoading } from '@fortawesome/free-solid-svg-icons';
+import { faBagShopping, faCar, faCartPlus, faClose, faEnvelope, faPlus, faShop, faShopLock, faShoppingBag, faSpinner, faStar, faStore, faStoreAlt, faStoreAltSlash, faTruckLoading } from '@fortawesome/free-solid-svg-icons';
 import Accueil from '../accueil';
 import { FaProductHunt } from 'react-icons/fa';
 import Productscategorie from '../produisparcategories';
@@ -31,6 +31,7 @@ const DetailProduit = () => {
   if(produit.etat_livraison === 1){
    prixlivraizon = 0; 
   }
+  const topRef = useRef(null);
   const [quantité, setQuantite] = useState(1);
   const [code_promo, setCodePromo] = useState('');
   const [bon_achat, setBonAchat] = useState('');
@@ -118,6 +119,24 @@ const [couleursprod, setCouleursprod] = useState([]);
     { nom: 'Brun sable', code: '#F4A460' },
     { nom: 'Or rose', code: '#FFC0CB' },
   ];
+
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 733);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 733);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+ 
     const fetchData = async () => {
       try {
         const response = await axios.get(`${api}/api/showproduit/${id}`);
@@ -372,13 +391,9 @@ if(loading){
     <>
 
       <div className="detail-produit-container" id="detailSection">
-        
+        {produit.promotion ?<span className='sppourcentage'>- {produit.pourcentagepromo} %</span>:''}
         <div className="img-container">
-          {produit.promotion?(
-            produit.pourcentagepromo?(
-              <span className='sppourcentage'>-{produit.pourcentagepromo}%</span>
-            ):'')     
-          :''}
+        
         
        {showExpandedImage && (
   <div className="expanded-image-overlay" onClick={() => setShowExpandedImage(false)}>
@@ -386,8 +401,13 @@ if(loading){
         <source src={expandedImage} type="video/mp4" 
         alt="Expanded" className="expanded-image"/>
         Your browser does not support the video tag.
-      </video>):(
-    <img src={expandedImage} alt="Expanded" className="expanded-image" />
+      </video>):(<><FontAwesomeIcon
+              
+              icon={faClose}
+             className='faclose'
+              
+            />
+    <img src={expandedImage} alt="Expanded" className="expanded-image" /></> 
   )}
   </div>
 )}
@@ -395,10 +415,10 @@ if(loading){
     imgpr.includes('.mp4') ? (
       <video controls className="videodet">
         <source src={`${api}/images/${imgpr}`} type="video/mp4" 
-         onClick={() => handleImageExpand(`https://pyesplus.store/public/images/${imgpr}`)}/>
+         onClick={() => handleImageExpand(`${api}/images/${imgpr}`)}/>
         Your browser does not support the video tag.
       </video>
-    ) : (
+    ) : ( 
       <img
   src={`${api}/images/${imgpr}`}
   alt={produit.image}
@@ -409,19 +429,20 @@ if(loading){
   )}
  
 
-          
-<div className='autrimg'>
+
+
+
   {produit.image1 && (
     imgpr.includes('.mp4') ? (
       <img
       src={`${api}/images/${imgpr1}`}
       alt={produit.image1}
       className="imgdetail1"
-      onClick={() => { changeimg(imgpr1); setimgpr1(imgpr) }}
+      onClick={() => handleImageExpand(`${api}/images/${imgpr1}`)}
     />
       
     ) : imgpr1.includes('.mp4') ?(
-      <div className="video-container" onClick={() => { changeimg(imgpr1); setimgpr1(imgpr) }}>
+      <div className="video-container" onClick={() => handleImageExpand(`${api}/images/${imgpr1}`)}>
   <video controls className="imgdetail1">
     <source src={`${api}/images/${imgpr1}`} type="video/mp4" />
     Your browser does not support the video tag.
@@ -432,7 +453,7 @@ if(loading){
       src={`${api}/images/${imgpr1}`}
       alt={produit.image1}
       className="imgdetail1"
-      onClick={() => { changeimg(imgpr1); setimgpr1(imgpr) }}
+      onClick={() => handleImageExpand(`${api}/images/${imgpr1}`)}
     />)
   )}
 
@@ -443,19 +464,19 @@ if(loading){
       src={`${api}/images/${imgpr2}`}
       alt={produit.image2}
       className="imgdetail1"
-      onClick={() => { changeimg(imgpr2); setimgpr2(imgpr) }}
+      onClick={() => handleImageExpand(`${api}/images/${imgpr2}`)}
     />
       
     ) : imgpr2.includes('.mp4') ?(
       <video controls className="imgdetail1" >
-      <source src={`${api}/images/${imgpr2}`} type="video/mp4" onClick={() => { changeimg(imgpr2); setimgpr2(imgpr) }}/>
+      <source src={`${api}/images/${imgpr2}`} type="video/mp4"  onClick={() => handleImageExpand(`${api}/images/${imgpr2}`)}/>
       Your browser does not support the video tag.
     </video>
     ) : (  <img
       src={`${api}/images/${imgpr2}`}
       alt={produit.image2}
       className="imgdetail1"
-      onClick={() => { changeimg(imgpr2); setimgpr2(imgpr) }}
+      onClick={() => handleImageExpand(`${api}/images/${imgpr2}`)}
     />)
   )}
 
@@ -466,22 +487,23 @@ if(loading){
       src={`${api}/images/${imgpr3}`}
       alt={produit.image3}
       className="imgdetail1"
-      onClick={() => { changeimg(imgpr3); setimgpr3(imgpr) }}
+      onClick={() => handleImageExpand(`${api}/images/${imgpr3}`)}
     />
       
     ) : imgpr3.includes('.mp4') ?(
       <video controls className="imgdetail1" >
-      <source src={`${api}/images/${imgpr3}`} type="video/mp4" onClick={() => { changeimg(imgpr3); setimgpr3(imgpr) }}/>
+      <source src={`${api}/images/${imgpr3}`} type="video/mp4"  onClick={() => handleImageExpand(`${api}/images/${imgpr3}`)}/>
       Your browser does not support the video tag.
     </video>
     ) : (  <img
       src={`${api}/images/${imgpr3}`}
       alt={produit.image3}
       className="imgdetail1"
-      onClick={() => { changeimg(imgpr3); setimgpr3(imgpr) }}
+      onClick={() => handleImageExpand(`${api}/images/${imgpr3}`)}
     />)
   )}
-</div>
+
+
 
 
 
@@ -494,7 +516,7 @@ if(loading){
             <FontAwesomeIcon
               key={index}
               icon={faStar}
-              className={index < nbetoile ? 'star-filled' : ''}
+              className={index < nbetoile ? 'star' : ''}
               style={{ color: 'orange' }}
             />
         ))}
@@ -535,10 +557,10 @@ if(loading){
 
 
           <p className="old_prix">
-           {exchangeRates ? ((produit.old_prix / exchangeRates.MAD) * exchangeRates[selectedCurrency]).toFixed(2) : 'Loading...'} <span className=''>{selectedCurrency}</span> 
+           {exchangeRates ? ((produit.old_prix / exchangeRates.MAD) * exchangeRates[selectedCurrency]).toFixed(2) : produit.old_prix} <span className=''>{selectedCurrency}</span> 
 </p>
           <p className="new_prix"> 
-            {exchangeRates ? ((produit.nv_prix / exchangeRates.MAD) * exchangeRates[selectedCurrency]).toFixed(2) : 'Loading...'} <span className=''>{selectedCurrency}</span> 
+            {exchangeRates ? ((produit.nv_prix / exchangeRates.MAD) * exchangeRates[selectedCurrency]).toFixed(2) : produit.nv_prix} <span className=''>{selectedCurrency}</span> 
 </p>
 
 <p className='livraisondet'><FontAwesomeIcon
@@ -559,7 +581,7 @@ if(loading){
          
 
           <button className="add-to-cart-btn" onClick={addToCart}>
-          {loadingcart ? <FontAwesomeIcon icon={faSpinner} />:<>Ajouter au Panier <FontAwesomeIcon icon={faCartPlus} /></>} 
+          {loadingcart ? <><FontAwesomeIcon icon={faSpinner} className='' spin /> Chargement...</>:<>Ajouter au Panier <FontAwesomeIcon icon={faCartPlus} /></>} 
           </button>
         
         </div>
@@ -619,7 +641,7 @@ if(loading){
           <FontAwesomeIcon
             key={index}
             icon={faStar}
-            className={index < comment.nb_etoil ? 'star-filled' : ''}
+            className={index < comment.nb_etoil ? 'star' : ''}
             style={{ color: 'orange' }}
           />
         ))}

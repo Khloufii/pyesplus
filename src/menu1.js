@@ -214,15 +214,14 @@ function Navigation() {
       <nav className={`navbar`}>
       <div className="logo-container">
       <Link id='imprim' to={auth.user && (auth.user.type === 'admin' || auth.user.type === 'vendeur') ? '/dashbord' : "/"} className="logo-link">
-        <img className='logo' src={`${process.env.PUBLIC_URL}/logo111.png`} alt='PYES-PLUS E-COM'/>       
+        <img className='logo' src={`${process.env.PUBLIC_URL}/logo9.png`} alt='PYES-PLUS E-COM'/>       
          </Link>
       </div>
      
-     
+      <Menuclient></Menuclient>
     <nav id='imprim' className='menudashbord'>
         {auth.user && (auth.user.type === 'admin' || auth.user.type === 'vendeur') ? <Menudashboard/> : <Serche />}
       </nav>
-       
     </nav>
    
     </>

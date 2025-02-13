@@ -8,6 +8,8 @@ import { faBagShopping, faCar, faStar } from '@fortawesome/free-solid-svg-icons'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectExchangeRates, selectapi, selectnewprod, selectselectedCurrency, setloading } from './reducer';
 import LoadingSpinner from './loading/loading';
+import Allproduct from './allproduct';
+import Accueil from './accueil';
 
 const NewProductsList = () => {
   const navigate = useNavigate();
@@ -40,34 +42,35 @@ const NewProductsList = () => {
   }
   return (
     <>
-    <h1 className='h1new'>NEW PRODUITS</h1>
+   
     <div className="collectionspromo containerrnew">
       
       {loading && <LoadingSpinner/>}
    
         {neworoduct.map((product) => (
           <div className="contentpromo" key={product.id}>
-             <Link className="product-link" to={`/detailprod/${product.id}`}  onClick={hindlprod} >
-            {product.promotion?(<span className='promonew'>-{product.pourcentagepromo}%</span>):''}
+             <a className="product-link" href={`/detailprod/${product.id}`}  >
+            {product.promotion?(<span className='promo'>-{product.pourcentagepromo}%</span>):''}
             <img src={`${api}/images/${product.image}`} alt={product.image} className='imgnew'/>
-            <h1 className='titrecontentnew'>{product.titre}</h1>
-            <p className='oldprixnew'>
+            <h1 className='titrecontentpromo'>{product.titre}</h1>
+            <p className='oldprixpromo'>
               {exchangeRates ? ((product.old_prix / exchangeRates.MAD) * exchangeRates[selectedCurrency]).toFixed(2) : product.old_prix}
                <span className='currencynew'>{selectedCurrency}</span>
             </p>
-            <p className='nvprixnew'>
+            <p className='nvprixpromo'>
               {exchangeRates ? ((product.nv_prix / exchangeRates.MAD) * exchangeRates[selectedCurrency]).toFixed(2) : product.nv_prix}
               <span className='currencynew'>{selectedCurrency}</span>
             </p>
           
             
-            </Link>
+            </a>
             
 
             </div>
         ))}
        
       </div>
+      <Accueil/>
       </>
   );
 };

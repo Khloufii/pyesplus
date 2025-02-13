@@ -18,6 +18,7 @@ import Topprodscrol from './topprodscrol';
 import NewProductsList from './productsnew';
 import Allproduct from './allproduct';
 import AdBar from './pub';
+import Productsnetflex from './productnetflex';
 
 const Accueil = () => {
   const dispatch = useDispatch();
@@ -65,13 +66,13 @@ const Accueil = () => {
 
 <>
    
-    <TopProductsList/>
+    
     <Newproducts/>
     <Topprodscrol />
     <PromoProductsList/>
     
-    <NewProductsList/>
-    <AdBar />
+    
+    <AdBar back='linear-gradient(85deg, rgba(154, 166, 50, 0.5) 0%, rgba(154, 166, 50, 0.5) 14.286%,rgba(146, 152, 50, 0.5) 14.286%, rgba(146, 152, 50, 0.5) 28.572%,rgba(138, 137, 50, 0.5) 28.572%, rgba(138, 137, 50, 0.5) 42.858%,rgba(131, 123, 51, 0.5) 42.858%, rgba(131, 123, 51, 0.5) 57.144%,rgba(123, 109, 51, 0.5) 57.144%, rgba(123, 109, 51, 0.5) 71.43%,rgba(115, 94, 51, 0.5) 71.43%, rgba(115, 94, 51, 0.5) 85.716%,rgba(107, 80, 51, 0.5) 85.716%, rgba(107, 80, 51, 0.5) 100.002%),linear-gradient(323deg, rgb(219, 91, 15) 0%, rgb(219, 91, 15) 14.286%,rgb(224, 99, 19) 14.286%, rgb(224, 99, 19) 28.572%,rgb(228, 106, 23) 28.572%, rgb(228, 106, 23) 42.858%,rgb(233, 114, 28) 42.858%, rgb(233, 114, 28) 57.144%,rgb(238, 122, 32) 57.144%, rgb(238, 122, 32) 71.43%,rgb(242, 129, 36) 71.43%, rgb(242, 129, 36) 85.716%,rgb(247, 137, 40) 85.716%, rgb(247, 137, 40) 100.002%)'/>
     <Allproduct/>
     </>
 

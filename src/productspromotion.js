@@ -50,7 +50,7 @@ const PromoProductsList = () => {
         
         {PromoProducts.map((product) => (
            <div className="contentpromo" key={product.id}>
-          <Link className="product-link" to={`/detailprod/${product.id}`}  onClick={hindlprod} >
+          <a className="product-link" href={`/detailprod/${product.id}`}   >
          
             <span className='promo'>-{product.pourcentagepromo}%</span>
             
@@ -77,7 +77,7 @@ const PromoProductsList = () => {
             ))}</p>
             
            
-               </Link> 
+               </a> 
             </div>
           
         ))}

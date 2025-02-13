@@ -12,7 +12,7 @@
 
 
 .orders-list {
-  width: auto;
+  width: 100%;
   border-collapse: collapse;
   margin-top: 2px;
   background-color: #ddd;
@@ -69,8 +69,8 @@
   background-color: #2980b9;
 }
 
-.arrow-symbol {
-  background-color: #fea408;
+.arrow-symboll {
+  background-color: #084afe;
   color: #ffffff;
   padding: 6px 10px;
   border: none;

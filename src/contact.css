@@ -1,6 +1,6 @@
 .contact-container {
   padding: 20px;
-  background-color: #121212;
+  background-color: #f1f0f0;
 
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
  
@@ -8,7 +8,7 @@
 
 .h2contact {
   font-size: 24px;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -25,16 +25,16 @@
 .icon {
   font-size: 20px;
   margin-right: 10px;
-  color: #ffffff;
+  color: #2c2a2a;
 }
 
 .pcontact {
   font-size: 16px;
-  color: #cbc7c7;
+  color: #1c1c1c;
 }
 
 .link {
-  color: #007bff;
+  color: #010c18;
   text-decoration: none;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .logo {
-  width: 100px;
+  width: 150px;
   height: auto;
 }
 .copiright{
@@ -60,7 +60,7 @@
 }
 .ttc{
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 }
 @media only screen and (max-width: 733px) {
   .copiright{

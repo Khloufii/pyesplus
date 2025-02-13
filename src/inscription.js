@@ -7,6 +7,8 @@ import { useNavigate,useParams } from 'react-router-dom';
 import { useAuth } from './authprovider';
 import { useDispatch,useSelector } from 'react-redux';
 import { selectapi } from './reducer';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Inscription() {
   const { id } = useParams();
@@ -111,7 +113,7 @@ else{
   return (
     <div className="inscription-container">
       <form onSubmit={createUser} className='inscription-form'>
-      <img className='logologin' src={`${process.env.PUBLIC_URL}/favicon.ico`} alt='PYES-PLUS E-COM'/> <span className='logintitre'>Inscription</span>
+      <img className='logologin' src={`${process.env.PUBLIC_URL}/faviconn.ico`} alt='PYES-PLUS E-COM'/> <span className='logintitre'>Inscription</span>
         {rep}
         <input type='text' className='input-field' name='name' value={name} onChange={(e) => setName(e.target.value)} placeholder='Nom' />
         <br />

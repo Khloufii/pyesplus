@@ -12,7 +12,8 @@ import { faDollarSign, faEuroSign, faList, faMoneyBill, faSearch, faSearchLocati
   faShoePrints,
   faShoppingBag,
   faRunning,
-  faSchool } from '@fortawesome/free-solid-svg-icons';
+  faSchool, 
+  faNetworkWired} from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
@@ -218,10 +219,11 @@ import Menuclient from './dashbordmenu';
       
     
       <div className="category-container">
+     
     {categories.map((category) => (
       <Link
         key={category.id}
-        to={`/productsresrcher/${category.id}`}
+        to={`/productsresrcher/categ/${category.id}`}
         className="category-item"
       >
           <FontAwesomeIcon icon={getCategoryIcon(category.titre)} />
@@ -242,7 +244,7 @@ import Menuclient from './dashbordmenu';
             placeholder="Serch ..."
           />
           <span className='serchsymbol'>
-            <Link to={searchTerm ? `/productsresrcher/${searchTerm}` : '#'}>
+            <Link to={searchTerm ? `/productsresrcher/text/${searchTerm}` : '#'}>
               <button className="btn-search" type="submit">
                 <i className="fa-search">
                   <FontAwesomeIcon icon={faSearch} className='fa-search' />
@@ -252,7 +254,7 @@ import Menuclient from './dashbordmenu';
           </span>
         </div>
       </form>
-      <Menuclient/>
+    
     </nav>
   );
 };

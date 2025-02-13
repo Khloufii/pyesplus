@@ -121,7 +121,7 @@ const Dashboard = () => {
       
         <header>
           <h1 className='dashbordh1' > <span>
-          <img className='logodashbord' src={`${process.env.PUBLIC_URL}/logo111.png`} alt='logo1.png' style={{width:'20%'}}/>       
+          <img className='logodashbord' src={`${process.env.PUBLIC_URL}/faviconn.ico`} alt='logo1.png' style={{width:'20%'}}/>       
 </span> Dashboard</h1>
         </header>
         <section className="stats-section" >

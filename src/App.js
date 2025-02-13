@@ -59,6 +59,7 @@ import NewProductsList from './productsnew';
 import FormulairCmd from './formulaire_commande';
 import Copiright from './copirght';
 import VisitorList from './admin/visiteur';
+import Productsnetflex from './productnetflex';
 function App() {
   const auth = useAuth();
  
@@ -71,6 +72,8 @@ function App() {
             <div>
             <AuthProvider>
              <Navigation/>
+        
+            
              
           <Routes>
             <Route path="/" element={<Home />} />
@@ -139,8 +142,9 @@ function App() {
 
             <Route path="/detailprod/:id" element={<DetailProduit />} />
             <Route path="/panier" element={<Panier />} />
-            <Route path="/productsresrcher/:id" element={<Productsrechercher />} />
+            <Route path="/productsresrcher/:type/:id" element={<Productsrechercher />} />
             <Route path="/productspromotion" element={<PromoProductsList />} />
+            <Route path="/CodeNetflix" element={<Productsnetflex />} />
             <Route path="/plusvendu" element={<TopProductsList />} />
             <Route path="/newproduct" element={<NewProductsList />} />
             <Route path="/formulair_cmd" element={<FormulairCmd />} />

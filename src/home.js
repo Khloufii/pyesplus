@@ -30,7 +30,7 @@ if(loading){
   return (
     <div className={`home-container ${Loading ? 'loading' : ''}`}>
         <>
-          <AdBar />
+          <AdBar back='pngtree-islamic-background-in-flat-style-with-pattern-image_1545394.jpg'/>
           <Accueil />
         </>
     </div>
