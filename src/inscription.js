@@ -113,7 +113,7 @@ else{
   return (
     <div className="inscription-container">
       <form onSubmit={createUser} className='inscription-form'>
-      <img className='logologin' src={`${process.env.PUBLIC_URL}/faviconn.ico`} alt='PYES-PLUS E-COM'/> <span className='logintitre'>Inscription</span>
+      <img className='logologin' src={`${process.env.PUBLIC_URL}/favicon2.ico`} alt='PYES-PLUS E-COM'/> <span className='logintitre'>Inscription</span>
         {rep}
         <input type='text' className='input-field' name='name' value={name} onChange={(e) => setName(e.target.value)} placeholder='Nom' />
         <br />

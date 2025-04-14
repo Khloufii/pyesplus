@@ -39,7 +39,7 @@ const Topprodscrol = () => {
 
   return (
     <div className='new-products-container'>
-      <h2 className='h2new'>Best-Seller</h2>
+      <h2 className='h2new'>best-seller</h2>
       <section id="sellers" className="scroll-container" onWheel={handleScroll}>
         <div ref={sellerRef} className="seller-container">
           {topProducts.map(product => (

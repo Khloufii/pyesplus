@@ -50,7 +50,9 @@ const AdBar = () => {
   }
 
   return (
+    
     <div className="ad-bar-container">
+      <a className="apub" href={`/newproduct`}>
       <div className="ad-bar">
         {latestProducts.map((ad, index) => (
           <div key={index} className={`ad-item ${index === currentAdIndex ? 'active' : ''}`}>
@@ -81,9 +83,9 @@ const AdBar = () => {
   ))}
 </div>
 
-      </div>
-
-      
+      </div></a>
+     
+   
     </div>
   );
 };

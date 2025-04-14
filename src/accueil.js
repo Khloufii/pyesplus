@@ -67,7 +67,7 @@ const Accueil = () => {
 <>
    
     
-    <Newproducts/>
+    
     <Topprodscrol />
     <PromoProductsList/>
     

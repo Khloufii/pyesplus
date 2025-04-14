@@ -106,7 +106,7 @@ const LoginComponent = () => {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleLogin}>
-      <img className='logologin' src={`${process.env.PUBLIC_URL}/faviconn.ico`} alt='PYES-PLUS E-COM'/>  <span className='logintitre'>Login</span>
+      <img className='logologin' src={`${process.env.PUBLIC_URL}/favicon2.ico`} alt='PYES-PLUS E-COM'/>  <span className='logintitre'>Login</span>
         <p className='eror'>{rep}</p><br/> 
         <div className="form-group">
           <input type="email" className="inputt" name='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' required />
