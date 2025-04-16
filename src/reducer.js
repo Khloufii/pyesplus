@@ -5,7 +5,7 @@ import axios from 'axios';
 const Slice = createSlice({
   name: 'Slice',
   initialState: {
-    api: 'https://pyesplus.wuaze.com',
+    api: 'http://127.0.0.1:8000',
     ip: localStorage.getItem('uniqueId'),
     categories: [],
     currencies: [],
@@ -107,7 +107,7 @@ export const {
   setloading,
   settotalvisit,
 } = Slice.actions;
-export const selectapi = (state) => state.Slice ? state.Slice.api : 'https://pyesplus.wuaze.com';
+export const selectapi = (state) => state.Slice ? state.Slice.api : 'http://127.0.0.1:8000';
 export const selectIp = (state) => state.Slice ? state.Slice.ip : '';
 export const selectCategories = (state) => state.Slice ? state.Slice.categories : [];
 export const selectCurrencies = (state) => state.Slice ? state.Slice.currencies : [];
